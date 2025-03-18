@@ -11,7 +11,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: '*',
+    origin: ['http://localhost:3000', 'https://juego-memoria-cliente.onrender.com'], // Añade la URL de tu cliente en Render
     methods: ['GET', 'POST']
   }
 });
